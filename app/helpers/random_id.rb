@@ -7,5 +7,3 @@ helpers do
     rand(1..card_quantity)
   end
 end
-
-
