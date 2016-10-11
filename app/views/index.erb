@@ -1,3 +1,6 @@
 <div class="container">
-  <img src="<%= @card.image_url %>" />
+  <img id="card_image" src="<%= @card.image_url %>" />
+  <form method="GET" action="/">
+    <input id="scry" type="submit" value="Scry" />
+  </form>
 </div>

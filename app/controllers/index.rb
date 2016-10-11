@@ -1,6 +1,11 @@
 get '/' do
   @card = Card.find(random_id)
-  erb :'index'
+  if request.xhr?
+    ### not sure about this
+    return card.image_url, layout: false
+  else
+    erb :'index'
+  end
 end
 
 
