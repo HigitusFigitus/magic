@@ -7,8 +7,8 @@ gem 'pg'
 gem 'sinatra'
 gem 'sinatra-contrib'
 
-# Use Thin for our web server
-gem 'thin'
+# Use Unicorn for our web server
+gem 'unicorn'
 
 gem 'activesupport'
 gem 'activerecord'
@@ -19,7 +19,7 @@ gem 'shotgun'
 
 gem 'mtg_sdk'
 
-gem 'eventmachine'
+# gem 'eventmachine'
 
 gem 'pry'
 
