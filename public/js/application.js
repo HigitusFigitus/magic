@@ -1,7 +1,28 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
-
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  addButtonListener();
 });
+
+var addButtonListener = function(){
+  $("#scry").on("click", function(e){
+    e.preventDefault();
+
+    var target = $(this);
+    var targetMethod = $(this).parent().attr("method");
+    var targetAction = $(this).parent().attr("action");
+
+    var request = $.ajax({
+      type: targetMethod,
+      url: targetAction
+    });
+
+    request.done(function(response){
+      console.log("Response retrieved.");
+      $("#image_div").empty();
+      $("#image_div").append(response);
+    });
+
+    request.fail(function(response){
+      console.log("There was a problem with the ajax request.");
+    });
+  });
+};
