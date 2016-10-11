@@ -1,6 +1,5 @@
 $(document).ready(function() {
   addButtonListener();
-  console.log("Success");
 });
 
 var addButtonListener = function(){
@@ -16,13 +15,14 @@ var addButtonListener = function(){
       url: targetAction
     });
 
-    /// replace image src with whatever is sent back from the be
     request.done(function(response){
-      $("#card_image").attr("src", response);
+      console.log("Response retrieved.");
+      $("#image_div").empty();
+      $("#image_div").append(response);
     });
 
-    request.done(function(response){
-      // error message
+    request.fail(function(response){
+      console.log("There was a problem with the ajax request.");
     });
   });
-}
+};
