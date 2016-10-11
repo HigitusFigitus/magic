@@ -1,5 +1,9 @@
 <div class="container">
-  <img id="card_image" src="<%= @card.image_url %>" />
+
+  <div id="image_div">
+    <%= erb :"_image_partial" %>
+  </div>
+
   <form method="GET" action="/">
     <input id="scry" type="submit" value="Scry" />
   </form>
