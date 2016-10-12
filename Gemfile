@@ -1,4 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
 ruby '2.3.1'
 
@@ -25,7 +25,7 @@ gem 'mtg_sdk'
 
 gem 'pry'
 
-group :test do
+group :test, :development do
   gem 'faker'
   gem 'rspec'
 end
