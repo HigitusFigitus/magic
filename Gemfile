@@ -24,8 +24,8 @@ gem 'mtg_sdk'
 # gem 'eventmachine'
 
 gem 'pry'
+gem 'rspec'
 
 group :test, :development do
   gem 'faker'
-  gem 'rspec'
 end
