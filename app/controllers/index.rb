@@ -6,3 +6,11 @@ get '/' do
     erb :'index'
   end
 end
+
+get '/users/new' do
+  erb :'users/new'
+end
+
+get '/sessions/new' do
+  erb :'sessions/new'
+end
