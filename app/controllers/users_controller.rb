@@ -9,7 +9,7 @@ post '/users' do
 
     if @user.save!
       login(@user)
-      redirect '/users/#{user.id}'
+      redirect "/users/#{@user.id}"
     else
       @errors = @user.errors.full_messages
       erb :'users/new'
