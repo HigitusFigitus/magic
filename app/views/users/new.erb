@@ -1,7 +1,7 @@
-<form id="register_form" method="POST" action="">
-  <input type="text" name="username" placeholder="Username">
-  <input type="text" name="email" placeholder="Email">
-  <input type="password" name="password" placeholder="Password">
-  <input type="password" name="confirm_password" placeholder="Confirm Password">
+<form id="register_form" method="POST" action="/users">
+  <input type="text" name="user[username]" placeholder="Username">
+  <input type="text" name="user[email]" placeholder="Email">
+  <input type="password" name="user[password]" placeholder="Password">
+  <input type="password" name="password_confirmation" placeholder="Confirm Password">
   <input type="submit" value="Create Account">
 </form>
