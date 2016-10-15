@@ -1,1 +1,3 @@
-@user.inspect
+<% if logged_in? %>
+  <p>Hello, <%= @current_user.username %> </p>
+<% end %>
