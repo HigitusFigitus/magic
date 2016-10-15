@@ -21,6 +21,8 @@ gem 'shotgun'
 
 gem 'mtg_sdk'
 
+gem 'bcrypt'
+
 # gem 'eventmachine'
 
 gem 'pry'
