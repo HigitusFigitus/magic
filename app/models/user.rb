@@ -3,10 +3,11 @@ require 'bcrypt'
 class User < ActiveRecord::Base
   include BCrypt
 
+  has_many :scores
   has_many :favorites
   has_many :cards, through: :favorites
 
-  validates :username, :email, :password, presence: true
+  # validates :username, :email, :password, presence: true
 
    def password
     @password ||= Password.new(password_hash)
