@@ -5,7 +5,12 @@ end
 post '/users' do
   if params[:password_confirmation] == params[:user][:password]
 
-    @user = User.new(params[:user])
+    @user = User.new(
+      username: params[:user][:username],
+      email: params[:user][:email],
+      password_hash: params[:user][:password],
+      score: 0
+      )
 
     if @user.save!
       login(@user)
