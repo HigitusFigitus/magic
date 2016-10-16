@@ -21,7 +21,7 @@ post '/users' do
     end
 
   else
-    @errors = ["Email or password don't match."]
+    @errors = "Email or password don't match."
     erb :'users/new'
   end
 end
