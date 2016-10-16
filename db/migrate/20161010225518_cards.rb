@@ -1,4 +1,4 @@
-# Should have been named create_cards
+# Migration class should have been named CreateCards
 class Cards < ActiveRecord::Migration
   def change
     create_table :cards do |t|
