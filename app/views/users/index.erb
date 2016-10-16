@@ -1,0 +1,8 @@
+<h1>Leaderboard</h1>
+<ul>
+  <% @users.each_with_index do |user, index| %>
+    <li><%= index + 1 %></li>
+    <li><%= user.username %></li>
+    <li><%= user.score %></li>
+  <% end %>
+</ul>
