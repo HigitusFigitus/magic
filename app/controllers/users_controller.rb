@@ -1,3 +1,11 @@
+get '/users' do
+  @users = User.all.order('score desc').limit(10)
+  p '*' * 40
+  p @users
+  p '*' * 40
+  erb :'users/index'
+end
+
 get '/users/new' do
   erb :'users/new'
 end
