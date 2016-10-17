@@ -1,3 +1,12 @@
+<% if logged_in? %>
+  <form method="GET" action="/users/<%= current_user.id %>">
+    <input type="submit" value="<%= current_user.username %> Profile"/>
+  </form>
+<% end %>
+<form method="GET" action="/">
+  <input type="submit" value="Scry"/>
+</form>
+
 <h1>Leaderboard</h1>
 <ul>
   <% @users.each_with_index do |user, index| %>

@@ -7,9 +7,9 @@ class User < ActiveRecord::Base
   has_many :favorites
   has_many :cards, through: :favorites
 
-  # validates :username, :email, :password, presence: true
+  validates :username, :email, :password_hash, presence: true
 
-   def password
+  def password
     @password ||= Password.new(password_hash)
   end
 
