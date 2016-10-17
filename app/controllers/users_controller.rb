@@ -1,8 +1,6 @@
 get '/users' do
   @users = User.all.order('score desc').limit(10)
-  p '*' * 40
   p @users
-  p '*' * 40
   erb :'users/index'
 end
 
@@ -16,20 +14,19 @@ post '/users' do
     @user = User.new(
       username: params[:user][:username],
       email: params[:user][:email],
-      password_hash: params[:user][:password],
+      password: params[:user][:password],
       score: 0
       )
 
-    if @user.save!
+    if @user.save
       login(@user)
       redirect "/users/#{@user.id}"
     else
       @errors = @user.errors.full_messages
       erb :'users/new'
     end
-
   else
-    @errors = "Email or password don't match."
+    @errors = ["Email or password don't match."]
     erb :'users/new'
   end
 end
