@@ -1,6 +1,5 @@
 get '/users' do
   @users = User.all.order('score desc').limit(10)
-  p @users
   erb :'users/index'
 end
 
@@ -34,4 +33,11 @@ end
 get '/users/:id' do
   @user = User.find(params[:id])
   erb :'users/show'
+end
+
+post "/" do
+  @favorite = Favorite.create(
+    user_id: current_user.id,
+    card_id: current_card.id
+    )
 end

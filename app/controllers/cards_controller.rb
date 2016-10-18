@@ -1,5 +1,6 @@
 get '/cards' do
   @card = Card.find(random_id)
+  session[:card_id] = @card.id
 
   if logged_in?
     current_user.score += 1
@@ -12,7 +13,3 @@ get '/cards' do
     erb :'index'
   end
 end
-
-
-# p '*' * 40
-

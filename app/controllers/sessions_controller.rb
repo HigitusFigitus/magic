@@ -7,7 +7,7 @@ post '/sessions' do
   if @user && @user.password == params[:user][:password]
     login(@user)
 
-    redirect "/users/#{@user.id}" #'/'
+    redirect "/users/#{@user.id}"
   else
     @errors = ["Username or password don't match."]
     erb :'sessions/new'
