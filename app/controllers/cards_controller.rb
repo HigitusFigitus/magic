@@ -12,7 +12,3 @@ get '/cards' do
     erb :'index'
   end
 end
-
-
-# p '*' * 40
-
