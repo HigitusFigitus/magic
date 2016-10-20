@@ -9,17 +9,17 @@
       <input type="submit" value="Leaderboard"/>
     </form>
 
-    <form method="POST" action="/">
-      <input type="submit" value="Add to Favorites"/>
+    <form method="POST" action="/users/<%= current_user.id %>/favorites">
+      <input type="submit" value="Add To Favorites"/>
     </form>
 
   <% else %>
 
-    <form method="GET" action="users/new">
+    <form method="GET" action="/users/new">
       <input id="register-button" type="submit" value="Register"/>
     </form>
 
-    <form method="GET" action="sessions/new">
+    <form method="GET" action="/sessions/new">
       <input id="login-button" type="submit" value="Login"/>
     </form>
 

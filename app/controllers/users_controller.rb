@@ -35,9 +35,17 @@ get '/users/:id' do
   erb :'users/show'
 end
 
-post "/" do
+post "/users/:current_user_id/favorites" do
   @favorite = Favorite.create(
-    user_id: current_user.id,
+    user_id: params[:current_user_id],
     card_id: current_card.id
     )
+  p '*' * 50
+  p current_card
+  p current_user.favorites[0]
+  p @favorite
+  p '*' * 50
+  if @favorite.save
+    redirect "/"
+  end
 end

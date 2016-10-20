@@ -3,7 +3,6 @@ require 'bcrypt'
 class User < ActiveRecord::Base
   include BCrypt
 
-  has_many :scores
   has_many :favorites
   has_many :cards, through: :favorites
 
