@@ -3,7 +3,7 @@ $(document).ready(function() {
 });
 
 var addButtonListener = function(){
-  $("#scry").on("click", function(e){
+  $("#scry-button").on("click", function(e){
     e.preventDefault();
 
     var target = $(this);
@@ -17,8 +17,8 @@ var addButtonListener = function(){
 
     request.done(function(response){
       console.log("Response retrieved.");
-      $("#image_div").empty();
-      $("#image_div").append(response);
+      $("#image-container").empty();
+      $("#image-container").append(response);
     });
 
     request.fail(function(response){
