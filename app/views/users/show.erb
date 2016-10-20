@@ -9,4 +9,11 @@
   <form method="GET" action="/users">
     <input type="submit" value="Go To Leaderboard"/>
   </form>
+
+  <h1>Favorite Cards</h1>
+  <ul>
+    <% @current_user.favorites.each do |favorite| %>
+      <li><img id="card_image" src="<%= display_image(favorite.id) %>" /></li>
+    <% end %>
+  </ul>
 <% end %>
