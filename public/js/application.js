@@ -16,7 +16,6 @@ var addButtonListener = function(){
     });
 
     request.done(function(response){
-      console.log("Response retrieved.");
       $("#image-container").empty();
       $("#image-container").append(response);
     });

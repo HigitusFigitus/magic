@@ -1,7 +1,7 @@
 get '/cards' do
   @card = Card.find(random_id)
   session[:card_id] = @card.id
-  # Got no method error which disappered after I cleared the cookies from the browser
+  # Got no method error which disappered after clearing browser cookies
   # Need to add a check to handle this case
   if logged_in?
     current_user.score += 1
