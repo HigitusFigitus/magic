@@ -8,8 +8,9 @@
   <form class="inline-form" method="GET" action="/users">
     <input id="username-button" class="myButton" type="submit" value="Leaderboard"/>
   </form>
-  <form class="inline-form" method="POST" action="/">
-    <input id="logout-button" class="myButton" type="submit" value="Log Out" />
+  <form class="inline-form" method="POST" action="/sessions">
+    <input type="hidden" name="_method" value="DELETE">
+    <input id="logout-button" class="myButton" type="submit" value="Log Out"/>
   </form>
 </div>
 
