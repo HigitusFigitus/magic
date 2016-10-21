@@ -1,4 +1,132 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
+body {
+  background-color: rgb(214, 214, 214);
+  color: "black";
+  font-family: 'Almendra SC', serif;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+#navigation {
+  text-align: right;
+}
+
+#login-button {
+  margin-right: 50px;
+}
+
+#register-button {
+  margin-right: 20px;
+}
+
+#username-button {
+  float: right;
+}
+
+#leaderboard-button {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.inline-form {
+  display: inline-block;
+}
+
+#image-container {
+  padding-top: 75px;
+}
+
+#footer {
+  text-align: center;
+}
+
+#scry-button {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#favorite-button {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body {
+  /* Location of the image */
+  background-image: url("../images/mtg3.jpg");
+
+  /* Image is centered vertically and horizontally at all times */
+  background-position: center center;
+
+  /* Image doesn't repeat */
+  background-repeat: no-repeat;
+
+  /* Makes the image fixed in the viewport so that it doesn't move when
+     the content height is greater than the image height */
+  background-attachment: fixed;
+
+  /* This is what makes the background image rescale based on its container's size */
+  background-size: cover;
+
+  /* Pick a solid background color that will be displayed while the background image is loading */
+  background-color:#464646;
+
+  /* SHORTHAND CSS NOTATION
+   * background: url(background-photo.jpg) center center cover no-repeat fixed;
+   */
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+  body {
+    /* The file size of this background image is 93% smaller
+     * to improve page load speed on mobile internet connections */
+    background-image: url(images/background-photo-mobile-devices.jpg);
+  }
+}
+
+.myButton {
+  -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #000000), color-stop(1, #000000));
+  background:-moz-linear-gradient(top, #000000 5%, #000000 100%);
+  background:-webkit-linear-gradient(top, #000000 5%, #000000 100%);
+  background:-o-linear-gradient(top, #000000 5%, #000000 100%);
+  background:-ms-linear-gradient(top, #000000 5%, #000000 100%);
+  background:linear-gradient(to bottom, #000000 5%, #000000 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000',GradientType=0);
+  background-color:#000000;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #000000;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #000000;
+  height: 32px;
+}
+.myButton:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #000000), color-stop(1, #000000));
+  background:-moz-linear-gradient(top, #000000 5%, #000000 100%);
+  background:-webkit-linear-gradient(top, #000000 5%, #000000 100%);
+  background:-o-linear-gradient(top, #000000 5%, #000000 100%);
+  background:-ms-linear-gradient(top, #000000 5%, #000000 100%);
+  background:linear-gradient(to bottom, #000000 5%, #000000 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000',GradientType=0);
+  background-color:#000000;
+}
+.myButton:active {
+  position:relative;
+  top:1px;
 }

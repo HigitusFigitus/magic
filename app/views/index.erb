@@ -1,36 +1,35 @@
-<div class="container">
+<!-- header div with navigation links -->
+<div id="navigation">
   <% if logged_in? %>
-
-    <form method="GET" action="/users/<%= current_user.id %>">
-      <input type="submit" value="<%= current_user.username %> Profile"/>
-    </form>
-
-    <form method="GET" action="/users">
-      <input type="submit" value="Leaderboard"/>
-    </form>
-
-    <form method="POST" action="/users/<%= current_user.id %>/favorites">
-      <input type="submit" value="Add To Favorites"/>
-    </form>
-
-  <% else %>
-
-    <form method="GET" action="/users/new">
-      <input id="register-button" type="submit" value="Register"/>
-    </form>
-
-    <form method="GET" action="/sessions/new">
-      <input id="login-button" type="submit" value="Login"/>
-    </form>
-
-  <% end %>
-
-  <div id="image-container">
-    <%= erb :'_image_partial' %>
-  </div>
-
-  <form method="GET" action="/">
-    <input id="scry-button" type="submit" value="Scry" />
+  <form method="GET" action="/users/<%= current_user.id %>">
+    <input id="username-button" class="myButton" type="submit" value="<%= current_user.username %>"/>
   </form>
+  <form method="GET" action="/users">
+    <input id="leaderboard-button" class="myButton" type="submit" value="Leaderboard"/>
+  </form>
+  <% else %>
+    <form id="register-button" method="GET" action="/users/new">
+      <input class="myButton" type="submit" value="Register"/>
+    </form>
+    <form id="login-button" method="GET" action="/sessions/new">
+      <input class="myButton" type="submit" value="Login"/>
+    </form>
+  <% end %>
+</div>
 
+<!-- card image div -->
+<div id="image-container">
+  <%= erb :'_image_partial' %>
+</div>
+
+<!-- footer div -->
+<div id="footer">
+  <form class="inline-form" method="GET" action="/">
+    <input id="scry-button" class="myButton" type="submit" value="Scry" />
+  </form>
+  <% if logged_in? %>
+  <form class="inline-form" method="POST" action="/users/<%= current_user.id %>/favorites">
+    <input id="favorite-button" class="myButton" type="submit"/ value="&#9733;">
+  </form>
+  <% end %>
 </div>

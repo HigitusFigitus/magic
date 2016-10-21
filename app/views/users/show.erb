@@ -1,14 +1,13 @@
 <% if logged_in? %>
-  <p>Hello, <%= @current_user.username %>!</p>
-  <p>You have scried <%= @current_user.score %> cards.</p>
-
   <form method="GET" action="/">
-    <input type="submit" value="Scry"/>
+    <input class="myButton" type="submit" value="Scry"/>
   </form>
 
   <form method="GET" action="/users">
-    <input type="submit" value="Go To Leaderboard"/>
+    <input class="myButton" type="submit" value="Leaderboard"/>
   </form>
+
+  <p>Hello, <%= @current_user.username %>! You have scried <%= @current_user.score %> cards.</p>
 
   <h1>Favorite Cards</h1>
   <ul>

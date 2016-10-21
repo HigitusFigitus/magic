@@ -1,10 +1,10 @@
 <% if logged_in? %>
   <form method="GET" action="/users/<%= current_user.id %>">
-    <input type="submit" value="<%= current_user.username %> Profile"/>
+    <input class="myButton" type="submit" value="<%= current_user.username %>"/>
   </form>
 <% end %>
 <form method="GET" action="/">
-  <input type="submit" value="Scry"/>
+  <input class="myButton" type="submit" value="Scry"/>
 </form>
 
 <h1>Leaderboard</h1>
