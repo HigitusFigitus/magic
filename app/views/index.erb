@@ -1,17 +1,20 @@
 <!-- header div with navigation links -->
 <div id="navigation">
   <% if logged_in? %>
-  <form method="GET" action="/users/<%= current_user.id %>">
-    <input id="username-button" class="myButton" type="submit" value="<%= current_user.username %>"/>
-  </form>
-  <form method="GET" action="/users">
+  <form class="inline-form" method="GET" action="/users">
     <input id="leaderboard-button" class="myButton" type="submit" value="Leaderboard"/>
   </form>
+  <form class="inline-form" method="GET" action="/users/<%= current_user.id %>">
+    <input id="username-button" class="myButton" type="submit" value="Favorites"/>
+  </form>
+  <form class="inline-form" method="POST" action="/">
+    <input id="logout-button" class="myButton" type="submit" value="Log Out" />
+  </form>
   <% else %>
-    <form id="register-button" method="GET" action="/users/new">
+    <form class="inline-form" id="register-button" method="GET" action="/users/new">
       <input class="myButton" type="submit" value="Register"/>
     </form>
-    <form id="login-button" method="GET" action="/sessions/new">
+    <form class="inline-form" id="login-button" method="GET" action="/sessions/new">
       <input class="myButton" type="submit" value="Login"/>
     </form>
   <% end %>
