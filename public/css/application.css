@@ -46,6 +46,11 @@ li {
   padding-bottom: 12px;
 }
 
+#login-form,
+#register-form {
+  padding-top: 100px;
+}
+
 body {
   /* Location of the image */
   background-image: url("../images/mtg3.jpg");

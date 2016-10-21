@@ -4,10 +4,13 @@
 </form>
 %>
 <div><%= erb :"_errors" %></div>
-<form id="register_form" method="POST" action="/users">
+<form id="register-form" class="inline-form" method="POST" action="/users">
   <input type="text" name="user[username]" placeholder="Username">
   <input type="text" name="user[email]" placeholder="Email">
   <input type="password" name="user[password]" placeholder="Password">
   <input type="password" name="password_confirmation" placeholder="Confirm Password">
   <input class="myButton" type="submit" value="Register">
+</form>
+<form class="inline-form" method="GET" action="/">
+  <input id="home-button" class="myButton" type="submit" value="Home"/>
 </form>

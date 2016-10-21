@@ -1,6 +1,9 @@
 <div><%= erb :"_errors" %></div>
-<form class="inline-form" id="login_form" method="POST" action="/sessions">
+<form id="login-form" class="inline-form" method="POST" action="/sessions">
   <input type="text" name="user[username]" placeholder="Username">
   <input type="password" name="user[password]" placeholder="Password">
   <input class="myButton" type="submit" value="Login">
+</form>
+<form class="inline-form" method="GET" action="/">
+  <input id="home-button" class="myButton" type="submit" value="Home"/>
 </form>
