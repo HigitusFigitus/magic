@@ -1,17 +1,22 @@
-<% if logged_in? %>
-  <form method="GET" action="/users/<%= current_user.id %>">
-    <input type="submit" value="<%= current_user.username %> Profile"/>
+<div id="navigation">
+  <form class="inline-form" method="GET" action="/">
+    <input id="scry-button" class="myButton" type="submit" value="Home"/>
   </form>
-<% end %>
-<form method="GET" action="/">
-  <input type="submit" value="Scry"/>
-</form>
-
-<h1>Leaderboard</h1>
-<ul>
-  <% @users.each_with_index do |user, index| %>
-    <li><%= index + 1 %></li>
-    <li><%= user.username %></li>
-    <li><%= user.score %></li>
+  <% if logged_in? %>
+  <form class="inline-form" method="GET" action="/users/<%= current_user.id %>">
+    <input id="username-button" class="myButton" type="submit" value="Favorites"/>
+  </form>
+  <form class="inline-form" method="POST" action="/">
+    <input id="logout-button" class="myButton" type="submit" value="Log Out" />
+  </form>
   <% end %>
-</ul>
+</div>
+
+<div class="text-background">
+  <h1>Leaderboard</h1>
+  <ul>
+   <% @users.each_with_index do |user, index| %>
+   <li><%= index + 1 %> | <%= user.username %> | <%= user.score %></li>
+   <% end %>
+  </ul>
+</div>

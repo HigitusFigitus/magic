@@ -1,19 +1,29 @@
 <% if logged_in? %>
-  <p>Hello, <%= @current_user.username %>!</p>
-  <p>You have scried <%= @current_user.score %> cards.</p>
 
-  <form method="GET" action="/">
-    <input type="submit" value="Scry"/>
+<!-- nagivation -->
+<div id="navigation">
+  <form class="inline-form" method="GET" action="/">
+    <input id="home-button" class="myButton" type="submit" value="Home"/>
   </form>
-
-  <form method="GET" action="/users">
-    <input type="submit" value="Go To Leaderboard"/>
+  <form class="inline-form" method="GET" action="/users">
+    <input id="username-button" class="myButton" type="submit" value="Leaderboard"/>
   </form>
+  <form class="inline-form" method="POST" action="/">
+    <input id="logout-button" class="myButton" type="submit" value="Log Out" />
+  </form>
+</div>
 
-  <h1>Favorite Cards</h1>
-  <ul>
-    <% @current_user.favorites.each do |favorite| %>
-      <li><img id="card_image" src="<%= display_image(favorite.id) %>" /></li>
-    <% end %>
-  </ul>
+<!-- text box -->
+<div class="text-background">
+<h1>Favorite Cards</h1>
+<p>Hello, <%= @current_user.username %>! You have scried <%= @current_user.score %> cards.</p>
+</div>
+
+<!-- card display -->
+<ul>
+  <% @current_user.favorites.each do |favorite| %>
+  <li class="inline-list-item"><img id="card_image" src="<%= display_image(favorite.id) %>" /></li>
+  <% end %>
+</ul>
+
 <% end %>
