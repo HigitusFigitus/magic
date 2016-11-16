@@ -29,11 +29,11 @@
 <!-- footer div -->
 <div id="footer">
   <form class="inline-form" method="GET" action="/">
-    <input id="scry-button" class="myButton" type="submit" value="Scry" />
+    <input id="scry-button" class="myButton" type="submit" value="Scry"/>
   </form>
   <% if logged_in? %>
   <form class="inline-form" method="POST" action="/users/<%= current_user.id %>/favorites">
-    <input id="favorite-button" class="myButton" type="submit"/ value="&#9733;">
+    <input id="favorite-button" class="myButton" type="submit" value="&#9733;"/>
   </form>
   <% end %>
 </div>
