@@ -1,7 +1,8 @@
 # [Magic Scry](http://mtgscry.herokuapp.com/cards)
 
 Magic Scry queries the Magic The Gathering API and lets you discover random cards. 
-You can save your favorite cards to a personal profile and scry as many as you can to get on the Leaderboard. 
+You can save your favorite cards to a personal profile and scry as many as you can to get on the Leaderboard.
+Visit the app at this link: http://mtgscry.herokuapp.com/cards
 
 ![Image of Magic Scry](/public/images/magic_home.png)  
   
