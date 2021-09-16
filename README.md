@@ -9,11 +9,10 @@ You can save your favorite cards to a personal profile and scry as many as you c
   
 ## MVP functionalities
 
-* Reveal cards randomly pulled from a database created via the Magic: The Gathering API
-
-* Create a Scrier Profile and save cards to your favorites
-
-* Get on the Leaderboard of the most active scriers  
+* Reveal cards randomly pulled from a database created via the Magic: The Gathering API.
+* Register new user and login.
+* Create a User Profile and save cards to your favorites.
+* Get on the Leaderboard of the most active users.  
 
 ![Image of Magic Scry Profile](/public/images/favorites.png)  
 
